@@ -65,7 +65,7 @@ membriTeam.forEach((membro) => {
               </div>
               <div class="col-8">
                 <div class="container d-flex flex-column align-items-start">
-                  <h3 id="nome-membro">${membro.nome}</h3>
+                  <h3 class="h4" id="nome-membro">${membro.nome}</h3>
                   <span id="ruolo-membro">${membro.ruolo}</span>
                   <a id="mail-membro" href="#">${membro.mail}</a>
                 </div>
