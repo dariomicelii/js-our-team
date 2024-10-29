@@ -5,7 +5,7 @@ const mailMembro = document.getElementById("mail-membro");
 
 let membriTeam = [
   {
-    immagine: "female1.png",
+    immagine: "male1.png",
     nome: "Marco Bianchi",
     ruolo: "Designer",
     mail: "marcobianchi@team.com",
@@ -19,28 +19,28 @@ let membriTeam = [
   },
 
   {
-    immagine: "female1.png",
+    immagine: "male2.png",
     nome: "Giorgio Verdi",
     ruolo: "Back-end Developer",
     mail: "giorgioverdi@team.com",
   },
 
   {
-    immagine: "female1.png",
+    immagine: "female2.png",
     nome: "Marta Ipsum",
     ruolo: "SEO Specialist",
     mail: "martaipsum@team.com",
   },
 
   {
-    immagine: "female1.png",
+    immagine: "male3.png",
     nome: "Roberto Lorem",
     ruolo: "SEO Specialist",
     mail: "robertolorem@team.com",
   },
 
   {
-    immagine: "female1.png",
+    immagine: "female3.png",
     nome: "Daniela Amet",
     ruolo: "Analyst",
     mail: "danielaamet@team.com",
@@ -48,33 +48,33 @@ let membriTeam = [
 ];
 
 const membroCard = document.getElementById("membro-card");
+let cardsHtml = ``;
 
-const stampaCard = () => {
-  membriTeam.forEach(
-    (cardDelMembro = membroCard.innerHTML =
-      ` <div class="d-flex justify-content-between">
+membriTeam.forEach((membro) => {
+  const memberCard = `
+        <div class="d-flex justify-content-between">
           <div class="col-4 bg-dark text-white mx-3">
             <div class="row">
               <div class="col-6">
                 <img
-                  id="${membriTeam.immagine}"
+                  id="immagine-membro"
                   class="img-fluid"
-                  src="./img/female1.png"
+                  src="./img/${membro.immagine}"
                   alt=""
                 />
               </div>
               <div class="col-6">
                 <div class="container d-flex flex-column align-items-start">
-                  <h3 id="nome-membro">${membriTeam.name}</h3>
-                  <span id="ruolo-membro">${membriTeam.ruolo}</span>
-                  <a id="mail-membro" href="#">${membriTeam.mail}</a>
+                  <h3 id="nome-membro">${membro.nome}</h3>
+                  <span id="ruolo-membro">${membro.ruolo}</span>
+                  <a id="mail-membro" href="#">${membro.mail}</a>
                 </div>
               </div>
             </div>
           </div>
-        </div>`)
-  );
-  return cardDelMembro;
-};
+        </div>`;
 
-stampaCard();
+  cardsHtml += memberCard;
+});
+
+membroCard.innerHTML = cardsHtml;
