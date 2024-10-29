@@ -51,8 +51,8 @@ const membroCard = document.getElementById("membro-card");
 
 const stampaCard = () => {
   membriTeam.forEach(
-    (cardDelMembro = membroCard.innerHTML(`
-        <div class="d-flex justify-content-between">
+    (cardDelMembro = document.getElementById("membro-card").innerHTML =
+      ` <div class="d-flex justify-content-between">
           <div class="col-4 bg-dark text-white mx-3">
             <div class="row">
               <div class="col-6">
@@ -72,7 +72,7 @@ const stampaCard = () => {
               </div>
             </div>
           </div>
-        </div>`))
+        </div>`)
   );
   return cardDelMembro;
 };
