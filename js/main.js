@@ -52,18 +52,18 @@ let cardsHtml = ``;
 
 membriTeam.forEach((membro) => {
   const memberCard = `
-        <div class="d-flex justify-content-between">
-          <div class="col-4 bg-dark text-white mx-3">
+        <div class="d-flex justify-content-between g-3">
+          <div class="bg-dark text-white mx-3 h-50"> 
             <div class="row">
-              <div class="col-6">
+              <div class="col-4">
                 <img
                   id="immagine-membro"
-                  class="img-fluid"
+                  class="h-50"
                   src="./img/${membro.immagine}"
                   alt=""
                 />
               </div>
-              <div class="col-6">
+              <div class="col-8">
                 <div class="container d-flex flex-column align-items-start">
                   <h3 id="nome-membro">${membro.nome}</h3>
                   <span id="ruolo-membro">${membro.ruolo}</span>
